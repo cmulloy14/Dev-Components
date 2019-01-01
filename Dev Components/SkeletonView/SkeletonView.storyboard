@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7hX-R9-LYx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Skeleton View Controller-->
+        <scene sceneID="fyt-LF-u5e">
+            <objects>
+                <viewController id="7hX-R9-LYx" customClass="SkeletonViewController" customModule="Dev_Components" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52q-Df-z9d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skeleton View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-P0-UoZ">
+                                <rect key="frame" x="133.5" y="20" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                        <integer key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mz3-fC-Pla">
+                                <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Skeleton View Cell" id="U1C-DH-EHl" customClass="SkeletonViewCell" customModule="Dev_Components" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1C-DH-EHl" id="QHo-M3-oTO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IS-h1-kS5">
+                                                    <rect key="frame" x="15" y="11" width="351" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="7IS-h1-kS5" id="taA-Kl-CcT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7hX-R9-LYx" id="lgc-X1-wp7"/>
+                                    <outlet property="delegate" destination="7hX-R9-LYx" id="mdq-2m-Auk"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="squ-4i-haD">
+                                <rect key="frame" x="112.5" y="49" width="150" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="2d4-xN-941"/>
+                                    <constraint firstAttribute="width" constant="150" id="QWL-nJ-r0j"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yQw-ZL-hL8">
+                                <rect key="frame" x="8" y="142" width="359" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="U7l-HX-Arc"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MGb-bu-V5b" firstAttribute="trailing" secondItem="yQw-ZL-hL8" secondAttribute="trailing" constant="8" id="7bC-8a-NMO"/>
+                            <constraint firstItem="Mz3-fC-Pla" firstAttribute="trailing" secondItem="MGb-bu-V5b" secondAttribute="trailing" id="7gw-Cx-zsy"/>
+                            <constraint firstItem="Mz3-fC-Pla" firstAttribute="bottom" secondItem="MGb-bu-V5b" secondAttribute="bottom" id="BmX-hH-KkH"/>
+                            <constraint firstItem="squ-4i-haD" firstAttribute="top" secondItem="BzY-P0-UoZ" secondAttribute="bottom" constant="8" id="Ga6-hl-vcn"/>
+                            <constraint firstItem="MGb-bu-V5b" firstAttribute="trailing" secondItem="BzY-P0-UoZ" secondAttribute="trailing" constant="133.5" id="I19-lC-vVJ"/>
+                            <constraint firstItem="yQw-ZL-hL8" firstAttribute="leading" secondItem="MGb-bu-V5b" secondAttribute="leading" constant="8" id="NaZ-Yv-2YJ"/>
+                            <constraint firstItem="squ-4i-haD" firstAttribute="centerX" secondItem="52q-Df-z9d" secondAttribute="centerX" id="PhW-9v-HUN"/>
+                            <constraint firstItem="BzY-P0-UoZ" firstAttribute="centerX" secondItem="52q-Df-z9d" secondAttribute="centerX" id="Xpt-T4-96w"/>
+                            <constraint firstItem="Mz3-fC-Pla" firstAttribute="leading" secondItem="MGb-bu-V5b" secondAttribute="leading" id="ZAu-Pk-J7b"/>
+                            <constraint firstItem="yQw-ZL-hL8" firstAttribute="centerX" secondItem="52q-Df-z9d" secondAttribute="centerX" id="ZOc-Fh-i0B"/>
+                            <constraint firstItem="yQw-ZL-hL8" firstAttribute="top" secondItem="squ-4i-haD" secondAttribute="bottom" constant="8" id="aXe-nI-sKP"/>
+                            <constraint firstItem="Mz3-fC-Pla" firstAttribute="top" secondItem="yQw-ZL-hL8" secondAttribute="bottom" constant="8" id="eaa-SJ-hzq"/>
+                            <constraint firstItem="BzY-P0-UoZ" firstAttribute="leading" secondItem="MGb-bu-V5b" secondAttribute="leading" constant="133.5" id="g7D-1H-iuM"/>
+                            <constraint firstItem="BzY-P0-UoZ" firstAttribute="top" secondItem="MGb-bu-V5b" secondAttribute="top" id="ohm-ll-Jlh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MGb-bu-V5b"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="squ-4i-haD" id="1fl-0z-mGY"/>
+                        <outlet property="tableView" destination="Mz3-fC-Pla" id="q7E-nu-Qdw"/>
+                        <outlet property="textView" destination="yQw-ZL-hL8" id="cgk-0q-Ihp"/>
+                        <outlet property="titleLabel" destination="BzY-P0-UoZ" id="6so-Q7-q6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etY-Fz-lYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.80000000000001" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+</document>
